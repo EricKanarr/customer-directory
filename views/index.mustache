@@ -1,15 +1,15 @@
-
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<body onload="loadUser()">
-<div id="target">Loading...</div>
-<script id="template" type="x-tmpl-mustache">
-Hello {{ name }}!
-</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="robot-container">
+      <img src={{img}} alt="robot pic">
+      <h2>{{name}}</h2>
+      <h4>{{job}}</h4>
+      <h4>{{company}}</h4>
+    </div>
+  </body>
 </html>
-function loadUser() {
-  var template = $('#template').html();
-  Mustache.parse(template);   // optional, speeds up future uses
-  var rendered = Mustache.render(template, {name: "Luke"});
-  $('#target').html(rendered);
